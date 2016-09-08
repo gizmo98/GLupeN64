@@ -102,6 +102,8 @@ ifneq (,$(findstring linux,$(platform)))
          HAVE_NEON = 1
       endif
       ifneq (,$(findstring cross,$(platform)))
+         INCFLAGS += -I$(ROOT_DIR)/custom/rpi-cross
+         GL_LIB += -L$(ROOT_DIR)/custom/rpi-cross -lrt
          CC = arm-linux-gnueabihf-gcc
          CXX = arm-linux-gnueabihf-g++
       endif
