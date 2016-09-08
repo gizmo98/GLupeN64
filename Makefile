@@ -102,8 +102,8 @@ ifneq (,$(findstring linux,$(platform)))
          HAVE_NEON = 1
       endif
       ifneq (,$(findstring cross,$(platform)))
-         CC = arm-linux-gnueabihf-gcc --sysroot=/rpifirmware
-         CXX = arm-linux-gnueabihf-g++ --sysroot=/rpifirmware
+         CC = arm-linux-gnueabihf-gcc
+         CXX = arm-linux-gnueabihf-g++
       endif
    endif
    
