@@ -101,6 +101,10 @@ ifneq (,$(findstring linux,$(platform)))
          CPUFLAGS += -mcpu=cortex-a53 -mfpu=neon-fp-armv8 -mfloat-abi=hard -mno-unaligned-access
          HAVE_NEON = 1
       endif
+      ifneq (,$(findstring cross,$(platform)))
+         CC = arm-linux-gnueabihf-gcc
+         CXX = arm-linux-gnueabihf-g++
+      endif
    endif
    
    # ODROIDs
