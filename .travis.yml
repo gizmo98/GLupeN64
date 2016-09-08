@@ -7,7 +7,7 @@ before_install:
   - docker pull ubuntu
   - docker run --name ubuntu -it -d ubuntu /bin/bash
 env:
-  - PLATFORM=unix
+  - PLATFORM=linux
   - PLATFORM=win
   - PLATFORM=android
   - PLATFORM=android-gles3
